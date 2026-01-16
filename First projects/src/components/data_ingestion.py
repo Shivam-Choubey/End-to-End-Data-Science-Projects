@@ -7,6 +7,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+
 # 1. Configuration Class
 # Using @dataclass is a clean way to store file paths without needing an __init__
 @dataclass
@@ -60,4 +63,7 @@ if __name__=="__main__":
     # Create object and run the ingestion
     obj = DataIngestion()
     # Added parentheses to actually execute the method
-    obj.initiate_data_ingestion()
+    trian_data, test_data = obj.initiate_data_ingestion()
+    
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformation(trian_data, test_data)
