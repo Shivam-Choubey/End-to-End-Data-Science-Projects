@@ -1,0 +1,41 @@
+# --- Core Data Science & Analysis ---
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+tqdm>=4.65.0          # Progress bars for long loops
+
+# --- Visualization ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.13.0        # Interactive visualizations
+
+# --- Machine Learning (Classic) ---
+scikit-learn>=1.2.0
+xgboost>=1.7.0
+lightgbm>=3.3.0
+catboost>=1.1.0
+
+# --- Deep Learning (Core Frameworks) ---
+# Note: Choose one or both depending on your project needs
+torch>=2.0.0          # PyTorch
+torchvision>=0.15.0
+torchaudio>=2.0.0
+tensorflow>=2.12.0    # TensorFlow/Keras
+
+# --- NLP & Transformers ---
+transformers>=4.28.0  # Hugging Face
+datasets>=2.11.0
+tokenizers>=0.13.0
+spacy>=3.5.0
+
+# --- Experiment Tracking & Utilities ---
+mlflow>=2.3.0
+wandb>=0.15.0         # Weights & Biases
+joblib>=1.2.0         # Model serialization
+python-dotenv>=1.0.0  # Managing environment variables
+
+# --- Notebook & Development ---
+ipykernel
+notebook
+ipywidgets
+-e.
