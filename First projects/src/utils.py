@@ -60,7 +60,12 @@ def evaluate_models(X_train, y_train, X_test, y_test, models):
     
 def load_object(file_path):
     try:
+        # Check if the file actually exists
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"The file was not found at: {os.path.abspath(file_path)}")
+            
         with open(file_path, "rb") as file_obj:
             return dill.load(file_obj)
+            
     except Exception as e:
         raise CustomException(e, sys)

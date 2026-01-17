@@ -20,8 +20,11 @@ class PredictPipeline:
         """
         try:
             # 1. Define paths to the 'frozen' objects created during training
+            BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            model_path = os.path.join(BASE_DIR, 'artifacts', 'model.pkl')
+            preprocessor_path = os.path.join(BASE_DIR, 'artifacts', 'preprocessor.pkl')
             model_path = os.path.join("artifacts", "model.pkl")
-            preprocessor_path = os.path.join('artifacts', 'preprocessor.pkl')
+            preprocessor_path = os.path.join("artifacts", "preprocessor.pkl")
 
             # 2. Load the objects back into memory
             # load_object is a helper function (usually using pickle or dill)
